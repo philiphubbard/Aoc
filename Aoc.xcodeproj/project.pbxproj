@@ -6,7 +6,40 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D326000F17B879F000CF8309 /* AocCppAVFoundationCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = D326000717B879F000CF8309 /* AocCppAVFoundationCamera.h */; };
+		D326001017B879F000CF8309 /* AocCppAVFoundationCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = D326000817B879F000CF8309 /* AocCppAVFoundationCamera.mm */; };
+		D326001117B879F000CF8309 /* AocCppCIDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = D326000917B879F000CF8309 /* AocCppCIDetector.h */; };
+		D326001217B879F000CF8309 /* AocCppCIDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D326000A17B879F000CF8309 /* AocCppCIDetector.mm */; };
+		D326001317B879F000CF8309 /* AocCppNSOpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */; };
+		D326001417B879F000CF8309 /* AocCppNSOpenGLBase.h in Headers */ = {isa = PBXBuildFile; fileRef = D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */; };
+		D326001517B879F000CF8309 /* AocNSOpenGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = D326000D17B879F000CF8309 /* AocNSOpenGLView.h */; };
+		D326001617B879F000CF8309 /* AocNSOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D326000E17B879F000CF8309 /* AocNSOpenGLView.mm */; };
+		D326001817B87AD900CF8309 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326001717B87AD900CF8309 /* AVFoundation.framework */; };
+		D326001A17B87AE900CF8309 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326001917B87AE900CF8309 /* QuartzCore.framework */; };
+		D326001C17B87B1400CF8309 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326001B17B87B1400CF8309 /* CoreMedia.framework */; };
+		D326001E17B885DE00CF8309 /* libAut.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D326001D17B885DE00CF8309 /* libAut.dylib */; };
+		D326002017B885FE00CF8309 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326001F17B885FE00CF8309 /* OpenGL.framework */; };
+		D326002217B8867100CF8309 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326002117B8867100CF8309 /* ApplicationServices.framework */; };
+		D326002417B8878600CF8309 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D326002317B8878600CF8309 /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		D326000717B879F000CF8309 /* AocCppAVFoundationCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AocCppAVFoundationCamera.h; sourceTree = "<group>"; };
+		D326000817B879F000CF8309 /* AocCppAVFoundationCamera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AocCppAVFoundationCamera.mm; sourceTree = "<group>"; };
+		D326000917B879F000CF8309 /* AocCppCIDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AocCppCIDetector.h; sourceTree = "<group>"; };
+		D326000A17B879F000CF8309 /* AocCppCIDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AocCppCIDetector.mm; sourceTree = "<group>"; };
+		D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AocCppNSOpenGLBase.cpp; sourceTree = "<group>"; };
+		D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AocCppNSOpenGLBase.h; sourceTree = "<group>"; };
+		D326000D17B879F000CF8309 /* AocNSOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AocNSOpenGLView.h; sourceTree = "<group>"; };
+		D326000E17B879F000CF8309 /* AocNSOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AocNSOpenGLView.mm; sourceTree = "<group>"; };
+		D326001717B87AD900CF8309 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D326001917B87AE900CF8309 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D326001B17B87B1400CF8309 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D326001D17B885DE00CF8309 /* libAut.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAut.dylib; path = "../../../../Library/Developer/Xcode/DerivedData/FacetiousWorkspace-fwmrwwelmqjckdfqxtkgakduskfp/Build/Products/Debug/libAut.dylib"; sourceTree = "<group>"; };
+		D326001F17B885FE00CF8309 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		D326002117B8867100CF8309 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		D326002317B8878600CF8309 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D326FFF017B86C2000CF8309 /* libAoc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libAoc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -15,6 +48,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D326002417B8878600CF8309 /* AppKit.framework in Frameworks */,
+				D326002217B8867100CF8309 /* ApplicationServices.framework in Frameworks */,
+				D326002017B885FE00CF8309 /* OpenGL.framework in Frameworks */,
+				D326001E17B885DE00CF8309 /* libAut.dylib in Frameworks */,
+				D326001C17B87B1400CF8309 /* CoreMedia.framework in Frameworks */,
+				D326001A17B87AE900CF8309 /* QuartzCore.framework in Frameworks */,
+				D326001817B87AD900CF8309 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -24,6 +64,21 @@
 		D326FFE717B86C2000CF8309 = {
 			isa = PBXGroup;
 			children = (
+				D326002317B8878600CF8309 /* AppKit.framework */,
+				D326002117B8867100CF8309 /* ApplicationServices.framework */,
+				D326001F17B885FE00CF8309 /* OpenGL.framework */,
+				D326001D17B885DE00CF8309 /* libAut.dylib */,
+				D326001B17B87B1400CF8309 /* CoreMedia.framework */,
+				D326001917B87AE900CF8309 /* QuartzCore.framework */,
+				D326001717B87AD900CF8309 /* AVFoundation.framework */,
+				D326000717B879F000CF8309 /* AocCppAVFoundationCamera.h */,
+				D326000817B879F000CF8309 /* AocCppAVFoundationCamera.mm */,
+				D326000917B879F000CF8309 /* AocCppCIDetector.h */,
+				D326000A17B879F000CF8309 /* AocCppCIDetector.mm */,
+				D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */,
+				D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */,
+				D326000D17B879F000CF8309 /* AocNSOpenGLView.h */,
+				D326000E17B879F000CF8309 /* AocNSOpenGLView.mm */,
 				D326FFF117B86C2000CF8309 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +98,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D326000F17B879F000CF8309 /* AocCppAVFoundationCamera.h in Headers */,
+				D326001117B879F000CF8309 /* AocCppCIDetector.h in Headers */,
+				D326001417B879F000CF8309 /* AocCppNSOpenGLBase.h in Headers */,
+				D326001517B879F000CF8309 /* AocNSOpenGLView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D326001017B879F000CF8309 /* AocCppAVFoundationCamera.mm in Sources */,
+				D326001217B879F000CF8309 /* AocCppCIDetector.mm in Sources */,
+				D326001317B879F000CF8309 /* AocCppNSOpenGLBase.cpp in Sources */,
+				D326001617B879F000CF8309 /* AocNSOpenGLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +227,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/FacetiousWorkspace-fwmrwwelmqjckdfqxtkgakduskfp/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -172,6 +240,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/..";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/FacetiousWorkspace-fwmrwwelmqjckdfqxtkgakduskfp/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -195,6 +268,7 @@
 				D326FFF617B86C2000CF8309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
