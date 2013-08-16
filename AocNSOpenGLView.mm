@@ -29,24 +29,6 @@
 #include "Aut/AutAlert.h"
 #include <map>
 
-#if 0
-// HEY!! Old
-
-// The createNSCppOpenGL() C++ function must be defined in a unit linked with this library.
-// It should allocate and return a class derived from Aoc::CppNSOpenGLBase that implements
-// the virtual functions from that class.
-
-extern Aoc::CppNSOpenGLBase* createAocCppNSOpenGL(Aoc::CppNSOpenGLRequester*);
-#endif
-#if 1
-// HEY!!
-
-// In an application using AocNSOpenGLView, the static Aoc::CppNSOpengGLBase::setCreator()
-// function must called, with its argument being a function that will return an instance
-// of a class derived from the C++ Aoc::CppNSOpenGLBase class.  If setCreator() is not
-// called, AocNSOpenGLView will generate a fatal error.
-#endif
-
 //
 
 namespace {
@@ -182,13 +164,15 @@ namespace Aoc
 
 - (id)initWithFrame:(NSRect)frame
 {
-    // Create a pixel format specifying OpenGL version 3.2, and GLSL version 1.50.
+    // Create a pixel format specifying OpenGL version 3.2, and
+    // GLSL version 1.50.
     
     NSOpenGLPixelFormatAttribute pixelFormatAttributes[] =
     {
-        // Note that when using the profile for OpenGL version 3.2, it is important to use the
-        // OpenGL/gl3.h header instead of the OpenGL/gl.h header (and thus the versions of
-        // glGenVertexArray and glBindVertexArray without the APPLE extension).
+        // Note that when using the profile for OpenGL version 3.2, it is
+        // important to use the OpenGL/gl3.h header instead of the OpenGL/gl.h
+        // header (and thus the versions of glGenVertexArray and
+        // glBindVertexArray without the APPLE extension).
         
         NSOpenGLPFAOpenGLProfile, NSOpenGLProfileVersion3_2Core,
         NSOpenGLPFAColorSize    , 24                           ,
@@ -219,17 +203,7 @@ namespace Aoc
         Aoc::CppNSOpenGLRequester* requester = new Aoc::CppNSOpenGLRequester;
         requesterToView[requester] = self;
         
-#if 0
-        // HEY!! Old
-        
-        // See the comment about createNSCppOpenGL() above.
-        
-        cppBase = createAocCppNSOpenGL(requester);
-#endif
-#if 1
-        // HEY!!
         cppBase = Aoc::CppNSOpenGLBase::create(requester);
-#endif
         if (!cppBase)
             self = nil;
     }

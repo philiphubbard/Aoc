@@ -29,9 +29,6 @@
 
 namespace Aoc
 {
-#if 1
-    // HEY!!
-    
     namespace
     {
         static std::function<CppNSOpenGLBase*(CppNSOpenGLRequester*)> creator = 0;
@@ -50,7 +47,6 @@ namespace Aoc
     {
         creator = cr;
     }
-#endif
     
     CppNSOpenGLBase::CppNSOpenGLBase()
     {

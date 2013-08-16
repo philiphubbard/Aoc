@@ -23,9 +23,6 @@
 //
 //  AocCppNSOpenGLBase.h
 //
-//  Created by Philip on 6/21/13.
-//  Copyright (c) 2013 Philip. All rights reserved.
-//
 
 #ifndef __CppNSOpenGLBase__
 #define __CppNSOpenglBase__
@@ -42,18 +39,15 @@ namespace Aoc
     class CppNSOpenGLBase
     {
     public:
-#if 1
-        // HEY!!
-        
-        // In an application using AocNSOpenGLView, the static Aoc::CppNSOpengGLBase::setCreator()
-        // function must called, with its argument being a function that will return an instance
-        // of a class derived from the C++ Aoc::CppNSOpenGLBase class.  If setCreator() is not
-        // called, AocNSOpenGLView will generate a fatal error.
+        // In an application using AocNSOpenGLView, the static
+        // Aoc::CppNSOpengGLBase::setCreator() function must called, with its
+        // argument being a function that will return an instance of a class
+        // derived from the C++ Aoc::CppNSOpenGLBase class.  If setCreator()
+        // is not called, AocNSOpenGLView will generate a fatal error.
 
         static CppNSOpenGLBase* create(CppNSOpenGLRequester*);
         static void             setCreator(std::function<CppNSOpenGLBase*
                                            (CppNSOpenGLRequester*)> creator);
-#endif
         
         CppNSOpenGLBase();
         virtual ~CppNSOpenGLBase();

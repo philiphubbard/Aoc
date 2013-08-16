@@ -31,10 +31,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-// Assumes that another unit defines the following C++ function:
-// Aoc::CppNSOpenGLBase* createAocCppNSOpenGL();
-// This function hould allocate and return a class derived from Aoc::CppNSOpenGLBase
-// that implementsthe virtual functions from that class.
+// In an application using AocNSOpenGLView, the static
+// Aoc::CppNSOpengGLBase::setCreator() function must called, with its argument
+// being a function that will return an instance of a class derived from the
+// C++ Aoc::CppNSOpenGLBase class.  If setCreator() is not called,
+// AocNSOpenGLView will generate a fatal error.
 
 @interface AocNSOpenGLView : NSOpenGLView
 
