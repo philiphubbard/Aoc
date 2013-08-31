@@ -85,7 +85,7 @@ namespace Aoc
         
     private:
         
-        // The data members of this class are hidden in the .cpp file.
+        // Details of the class' data are hidden in the .cpp file.
         
         class Imp;
         std::unique_ptr<Imp> _m;
