@@ -21,7 +21,7 @@
 // http://opensource.org/licenses/MIT
 
 //
-//  AocNSOpenGLBase.cpp
+// AocNSOpenGLBase.cpp
 //
 
 #include "AocCppNSOpenGLBase.h"

@@ -21,9 +21,12 @@
 // http://opensource.org/licenses/MIT
 
 //
-//  AocCppAVFoundationCamera.h
+// AocCppAVFoundationCamera.h
 //
-
+// A C++ base class giving access to the Objective-C AVFoundationCamera class,
+// which accesses a computer's video camera.  A derived class should redefine
+// the virtual function to get video frames.
+//
 // Requires the following linked frameworks and libraries:
 // AVFoundation.framework
 // QuartzCore.framework
@@ -41,20 +44,29 @@ namespace Aoc
     class CppAVFoundationCamera
     {
     public:
-        // If the instance is allocated in a WorkerThread, then it
-        // will have its own internal Objective-C autorelease pool.
+        
+        // If the instance is specified as being allocated in a worker thread,
+        // then it will have its own Objective-C autorelease pool.
         
         enum WhichThread { MainThread, WorkerThread };
         
         CppAVFoundationCamera(WhichThread = MainThread);
         ~CppAVFoundationCamera();
         
+        // Control whether the camera if active or not.
+        
         void            start();
         void            stop();
         
-        virtual void    handleCapturedImage (CGImageRef);
+        // A derived class should redefine this virtual function,
+        // which gets called with each captured video frame.
+        
+        virtual void    handleCapturedImage (CGImageRef) = 0;
         
     private:
+        
+        // The data members of this class are hidden in the .cpp file.
+        
         class Imp;
         std::unique_ptr<Imp> _m;
     };

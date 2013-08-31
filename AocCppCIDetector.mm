@@ -21,11 +21,13 @@
 // http://opensource.org/licenses/MIT
 
 //
-//  CppCIDetector.m
+// CppCIDetector.mm
+//
+// Note that the code in this file is Objective-C++, mixing both Objective-C
+// and C++.
 //
 
 #include "AocCppCIDetector.h"
-#include <iostream>
 
 #include <sys/types.h>
 #include <sys/times.h>
@@ -55,13 +57,13 @@ namespace Aoc
         if (whichThread == WorkerThread)
             _m->pool = [[NSAutoreleasePool alloc] init];
 
-        NSDictionary* options = @{CIDetectorTracking : @(YES),
-                                  CIDetectorAccuracy : CIDetectorAccuracyHigh};
+        NSDictionary* options = @{CIDetectorTracking:@(YES),
+                                  CIDetectorAccuracy:CIDetectorAccuracyHigh};
         
         // Created by a class method, so goes in the autorelease pool.
 
         _m->detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil
-                                           options:options];
+                                          options:options];
     }
 
     CppCIDetector::~CppCIDetector()

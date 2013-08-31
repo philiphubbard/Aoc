@@ -21,7 +21,10 @@
 // http://opensource.org/licenses/MIT
 
 //
-//  AocNSOpenGLView.mm
+// AocNSOpenGLView.mm
+//
+// Note that the code in this file is Objective-C++, mixing both Objective-C
+// and C++.
 //
 
 #import "AocNSOpenGLView.h"
@@ -31,9 +34,17 @@
 
 //
 
-namespace {
+namespace
+{
 
+    // Keep track of which Aoc::CppNSOpenGLRequester is associated with which
+    // AocNSOpenGLView, so the Aoc::CppNSOpenGLRequester can trigger a redraw of
+    // the AocNSOpenGLView.
+    
     static std::map<Aoc::CppNSOpenGLRequester*, AocNSOpenGLView*> requesterToView;
+    
+    // These functions will be registered with Aut to display warning and error
+    // messages in NSAlert dialogs.
     
     void warningFunction(const std::string& txt)
     {
@@ -133,7 +144,8 @@ namespace Aoc
 - (void)keyDown:(NSEvent *)theEvent
 {
     char c = 0;
-    Aoc::CppNSOpenGLBase::KeyEvent::SpecialCharacter sc = Aoc::CppNSOpenGLBase::KeyEvent::None;
+    Aoc::CppNSOpenGLBase::KeyEvent::SpecialCharacter sc =
+        Aoc::CppNSOpenGLBase::KeyEvent::None;
     
     NSString* s = [theEvent characters];
     if ([s length] > 0)
@@ -193,6 +205,8 @@ namespace Aoc
 
     if (self)
     {
+        // Set Aut warning and error messages to go to NSAlert dialogs.
+        
         if (!Aut::warningFunction())
             Aut::setWarningFunction(warningFunction);
         if (!Aut::errorFunction()) 
@@ -202,6 +216,9 @@ namespace Aoc
         
         Aoc::CppNSOpenGLRequester* requester = new Aoc::CppNSOpenGLRequester;
         requesterToView[requester] = self;
+        
+        // Create the C++ class derived from Aoc::CppNSOpenGLBase that will handle
+        // OpenGL rendering.
         
         cppBase = Aoc::CppNSOpenGLBase::create(requester);
         if (!cppBase)
@@ -213,7 +230,8 @@ namespace Aoc
 
 // Defined in NSOpenGLView.
 // Called only once after the OpenGL context is made the current context.
-// Subclasses that implement this method can use it to configure the Open GL state in preparation for drawing.
+// Subclasses that implement this method can use it to configure the Open GL state in
+// preparation for drawing.
 
 - (void)prepareOpenGL
 {

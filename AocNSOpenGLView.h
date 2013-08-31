@@ -21,21 +21,28 @@
 // http://opensource.org/licenses/MIT
 
 //
-//  AocNSOpenGLView.h
+// AocNSOpenGLView.h
 //
-
+// An Objective-C class, derived from NSOpenGLView, that allows C++ code to do the
+// OpenGL rendering.  It does so by maintaining an instance of a class derived from
+// the C++ Aoc::CppNSOpenGLBase class.
+//
+// In an application using AocNSOpenGLView, the static
+// Aoc::CppNSOpengGLBase::setCreator() function must called, with its argument
+// being a function that will return an instance of a class derived from the
+// C++ Aoc::CppNSOpenGLBase class.  If setCreator() is not called,
+// AocNSOpenGLView will generate a fatal error.  See the README file for an
+// example of how to call this function in an Objective-C application.
+//
+// AocNSOpenGLView sets up the error-reporting API from the Aut library so that the
+// results appear in NSAlert dialogs.
+//
 // Requires the following linked frameworks and libraries:
 // OpenGL.framework
 // AppKit.framework
 
 
 #import <Cocoa/Cocoa.h>
-
-// In an application using AocNSOpenGLView, the static
-// Aoc::CppNSOpengGLBase::setCreator() function must called, with its argument
-// being a function that will return an instance of a class derived from the
-// C++ Aoc::CppNSOpenGLBase class.  If setCreator() is not called,
-// AocNSOpenGLView will generate a fatal error.
 
 @interface AocNSOpenGLView : NSOpenGLView
 

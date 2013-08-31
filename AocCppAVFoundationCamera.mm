@@ -21,11 +21,13 @@
 // http://opensource.org/licenses/MIT
 
 //
-//  CppAVFoundationCamera.m
+// CppAVFoundationCamera.mm
+//
+// Note that the code in this file is Objective-C++, mixing both Objective-C
+// and C++.
 //
 
 #include "AocCppAVFoundationCamera.h"
-#include <iostream>
 
 #import <AVFoundation/AVFoundation.h>
 #import <AVFoundation/AVCaptureOutput.h>
@@ -192,12 +194,6 @@ namespace Aoc
     void CppAVFoundationCamera::stop()
     {
         [_m->objcImp->session stopRunning];
-    }
-
-    void CppAVFoundationCamera::handleCapturedImage(CGImageRef image)
-    {
-        std::cout << "default CppAVFoundationCamera::handleCapturedImage() w "
-                  << CGImageGetWidth(image) << " h " << CGImageGetHeight(image) << "\n";
     }
 
 }

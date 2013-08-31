@@ -23,7 +23,9 @@
 //
 //  AocCppCIDetector.h
 //
-
+// A C++ base class giving access to the Objective-C CIDetector class,
+// which detects faces in images.
+//
 // Requires the following linked frameworks and libraries:
 // CoreMedia.framework
 // QuartzCore.framework
@@ -40,33 +42,51 @@ namespace Aoc
     class CppCIDetector
     {
     public:
-        // If the instance is allocated in a WorkerThread, then it
-        // will have its own internal Objective-C autorelease pool.
-        
+
+        // If the instance is specified as being allocated in a worker thread,
+        // then it will have its own Objective-C autorelease pool.
+                
         enum WhichThread { MainThread, WorkerThread };
 
         CppCIDetector(WhichThread = MainThread);
         ~CppCIDetector();
         
+        // A detected face.
+        
         class Face
         {
         public:
+            
             Face (float x = 0, float y = 0, float w = 0, float h = 0) :
                 _x(x), _y(y), _width(w), _height(h) {}
+            
+            // The lower-left corner of a rectangle for the detected face.
+            
             float   x() const { return _x; }
             float   y() const { return _y; }
+            
+            // The size of the rectangle for the detected face.
+            
             float   width() const { return _width; }
             float   height() const { return _height; }
+            
         private:
+            
             float   _x;
             float   _y;
             float   _width;
             float   _height;
         };
         
+        // Detects faces in the specified image, putting any faces detected into the
+        // result vector.  Returns true if any faces were detected.
+        
         bool detect(CGImageRef, std::vector<Face>& result);
         
     private:
+        
+        // The data members of this class are hidden in the .cpp file.
+        
         class Imp;
         std::unique_ptr<Imp> _m;
     };

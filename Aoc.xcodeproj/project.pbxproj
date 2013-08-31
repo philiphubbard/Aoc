@@ -41,6 +41,7 @@
 		D326002117B8867100CF8309 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		D326002317B8878600CF8309 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D326FFF017B86C2000CF8309 /* libAoc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libAoc.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39A511C17CEFC820026F899 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +76,11 @@
 				D326000817B879F000CF8309 /* AocCppAVFoundationCamera.mm */,
 				D326000917B879F000CF8309 /* AocCppCIDetector.h */,
 				D326000A17B879F000CF8309 /* AocCppCIDetector.mm */,
-				D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */,
-				D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */,
 				D326000D17B879F000CF8309 /* AocNSOpenGLView.h */,
 				D326000E17B879F000CF8309 /* AocNSOpenGLView.mm */,
+				D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */,
+				D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */,
+				D39A511C17CEFC820026F899 /* README.txt */,
 				D326FFF117B86C2000CF8309 /* Products */,
 			);
 			sourceTree = "<group>";
