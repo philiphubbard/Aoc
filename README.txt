@@ -64,13 +64,9 @@ The Xcode project build settings assume that all code---Aoc, Aut and any other p
 
 Future Work
 
-Aoc::CppAVFoundationCamera should have API to control the options for AVFoundationCamera.
-
-Aoc::CppAVFoundationCamera's code for converting the video image to a CGImageRef may not be as efficient as it could be (although it did not appear to be a problem in profiling of the Facetious application).
-
-Aoc::CppAVFoundationCamera should have better error handling for cases like dropped frames.
-
-Aoc::CppCIDetector should have API to control the options for CIDetector.
-
-Aoc::CppNSOpenGLBase should have virtual functions for a more complete set of events, beyond key presses.
+* Aoc::CppAVFoundationCamera should have API to control the options for AVFoundationCamera.
+* Aoc::CppAVFoundationCamera's code for converting the video image to a CGImageRef may not be as efficient as it could be (although it did not appear to be a problem in profiling of the Facetious application).
+* Aoc::CppAVFoundationCamera should have better error handling for cases like dropped frames.
+* Aoc::CppCIDetector should have API to control the options for CIDetector.
+* Aoc::CppNSOpenGLBase should have virtual functions for a more complete set of events, beyond key presses.
 
