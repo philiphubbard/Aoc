@@ -29,7 +29,7 @@
 
 #import "AocNSOpenGLView.h"
 #include "AocCppNSOpenGLBase.h"
-#include "Aut/AutAlert.h"
+#include "AutAlert.h"
 #include <map>
 
 //
