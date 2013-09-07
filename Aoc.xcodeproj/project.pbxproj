@@ -72,14 +72,7 @@
 				D326001B17B87B1400CF8309 /* CoreMedia.framework */,
 				D326001917B87AE900CF8309 /* QuartzCore.framework */,
 				D326001717B87AD900CF8309 /* AVFoundation.framework */,
-				D326000717B879F000CF8309 /* AocCppAVFoundationCamera.h */,
-				D326000817B879F000CF8309 /* AocCppAVFoundationCamera.mm */,
-				D326000917B879F000CF8309 /* AocCppCIDetector.h */,
-				D326000A17B879F000CF8309 /* AocCppCIDetector.mm */,
-				D326000D17B879F000CF8309 /* AocNSOpenGLView.h */,
-				D326000E17B879F000CF8309 /* AocNSOpenGLView.mm */,
-				D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */,
-				D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */,
+				D3B2789D17DBDCA500459DC6 /* src */,
 				D39A511C17CEFC820026F899 /* README.txt */,
 				D326FFF117B86C2000CF8309 /* Products */,
 			);
@@ -91,6 +84,21 @@
 				D326FFF017B86C2000CF8309 /* libAoc.dylib */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D3B2789D17DBDCA500459DC6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D326000717B879F000CF8309 /* AocCppAVFoundationCamera.h */,
+				D326000817B879F000CF8309 /* AocCppAVFoundationCamera.mm */,
+				D326000917B879F000CF8309 /* AocCppCIDetector.h */,
+				D326000A17B879F000CF8309 /* AocCppCIDetector.mm */,
+				D326000D17B879F000CF8309 /* AocNSOpenGLView.h */,
+				D326000E17B879F000CF8309 /* AocNSOpenGLView.mm */,
+				D326000B17B879F000CF8309 /* AocCppNSOpenGLBase.cpp */,
+				D326000C17B879F000CF8309 /* AocCppNSOpenGLBase.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
