@@ -53,20 +53,30 @@ Although AocNSOpenGLView's implementation calls C++ code via Aoc::CppNSOpenGLBas
 
 Building
 
-Since Aoc is designed to work with Cocoa libraries, it requires an Apple OS X platform.  It uses the following frameworks: ApplicationServices.framework, AVFoundation.framework, CoreMedia.framework, OpenGL.framework, QuartzCore.framework.  Aoc also requires a compiler that supports Objective-C++ in addition to Objective-C and C++.  The particular version of Xcode used for Facetious development was 4.6.3.
+Since Aoc is designed to work with Cocoa libraries, it requires an Apple OS X platform.  It uses the following frameworks: ApplicationServices.framework, AVFoundation.framework, CoreMedia.framework, OpenGL.framework, QuartzCore.framework.  Aoc also requires a compiler that supports Objective-C++ in addition to Objective-C and C++.  The particular version of Xcode used for Facetious development was 4.6.3.  The Xcode project settings are stored in Aoc.xcodeproj/project.pbxproj.
 
 Aoc also depends on Aut, A Utility Toolkit, which has some error-reporting API that AocNSOpenGLView sets up to display messages with the NSAlert class.
 
-The Xcode project build settings assume that all code---Aoc, Aut and any other projects used by an application---are siblings at the same level in the directory hierarchy.  In the "Build Settings," the "Header Search Paths" is set to "$(SRCROOT)/..", allowing source code to have include statements like the following:
+The Xcode project build settings assume that all code---Aoc, Aut and any other projects used by an application---are siblings at the same level in the directory hierarchy.  Aoc and Aut have header files in a "src" subdirectory.  So in the Aoc project build settings, the "Header Search Paths" is set to "$(SRCROOT)/../Aut/src", allowing Aoc code to have include statements like the following:
 
-	#include "Aoc/AocCppAVFoundationCamera.h"
+	#include "AutAlert.h"
+
+Similarly, an application using Aoc should have a build setting with "Header Search Paths" that includes "$(SRCROOT)/../Aoc/src" so it can have include statements like the following:
+
+	#include "AocCppAVFoundationCamera.h"
+
+The project has a build setting of "Installation Directory" to "@rpath".  This setting allows the library to be found when it is embedded in an application bundle.  The application should have a build setting of "Runpath Search Paths" to "@loader_path/../Frameworks" and a "Copy Files" build phase to copy the library into the Frameworks section of its bundle.
 
 
 Future Work
 
 * Aoc::CppAVFoundationCamera should have API to control the options for AVFoundationCamera.
+
 * Aoc::CppAVFoundationCamera's code for converting the video image to a CGImageRef may not be as efficient as it could be (although it did not appear to be a problem in profiling of the Facetious application).
+
 * Aoc::CppAVFoundationCamera should have better error handling for cases like dropped frames.
+
 * Aoc::CppCIDetector should have API to control the options for CIDetector.
+
 * Aoc::CppNSOpenGLBase should have virtual functions for a more complete set of events, beyond key presses.
 
