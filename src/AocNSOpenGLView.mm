@@ -31,6 +31,7 @@
 #include "AocCppNSOpenGLBase.h"
 #include "AutAlert.h"
 #include <map>
+#import <OpenGL/gl3.h>
 
 //
 
