@@ -32,7 +32,7 @@
 //
 
 #ifndef __CppNSOpenGLBase__
-#define __CppNSOpenglBase__
+#define __CppNSOpenGLBase__
 
 #include <iostream>
 
